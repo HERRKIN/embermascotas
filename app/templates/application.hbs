@@ -1,0 +1,34 @@
+
+<div class="container">
+    	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Saeco Pruebas Ember</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+           {{#link-to 'index'  tagName="li"  }} <a href="#">inicio</a> {{/link-to}}
+			{{#link-to 'personas' tagName="li"  }}<a href="#">personas</a>{{/link-to}}
+			{{#link-to 'pets' tagName="li"  }}<a href="#">mascotas</a>{{/link-to}}
+
+       
+      </ul>
+   
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    {{outlet}}
+
+
+
+				         

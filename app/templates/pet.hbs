@@ -1,0 +1,44 @@
+    <h1>
+    nombre {{nombre}} </br>color {{color}}
+    </h1>
+    <p>pertenece a:
+   {{dueno.nombre}} {{dueno.apellido}}</p>
+  
+
+  {{#if editando}}
+      <form role="form">
+      <div class="form-group">
+        <label for="nombre">nombre</label>
+        {{input id='nombre' class="form-control" value=nombre}}
+      </div>
+      <div class="form-group">
+        <label for="color">color</label>
+        {{input id='color' class="form-control" value = color}}
+      </div>
+		seleccionado {{dueno.id}}
+       <select name="dueno" id="dueno" selection=dueno.id>
+        {{#each personas}}
+        <option value="id">{{nombre}} {{apellido}}</option>
+        {{/each}}
+       </select>
+        {{#each model in personas}}
+        {{model.name}}
+        {{/each}}
+
+       <!--{{view Ember.Select  
+
+        content=personas
+        optionValuePath="content.id"
+        optionLabelPath="content.nombre"
+        value = dueno.id}} </br>-->
+      <button type="submit" class="btn btn-success" {{action 'modificar'}}>Guardar</button>
+
+      </form>
+    {{/if}}
+    {{#unless editando}}
+    <a href="#" class="btn btn-success" {{action 'editar'}}>Editar</a>
+    <a href="#" class="btn btn-danger" {{action 'eliminar'}}>Eliminar</a>
+    {{/unless}}
+
+
+

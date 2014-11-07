@@ -1,0 +1,25 @@
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+           <div class="class='col-md-9"> {{#link-to 'pets.nueva' tagName="button" class="btn btn-default "}}Crear mascota{{/link-to}}</div>
+     </div>
+     <div class="panel-body">
+       
+      <div class='col-md-3'>
+
+   
+
+                  <ul class="nav">
+                      {{#each model}}
+                      <li>
+                        {{#link-to 'pet' this }} {{nombre}} {{color}}{{/link-to}}
+                      </li>
+                      {{/each}}
+                  </ul>
+      </div>
+                 <div class="col-md-9 bg-success">
+                  {{outlet}}
+              </div>
+     </div>
+   </div>
